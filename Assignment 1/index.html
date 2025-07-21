@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple Webpage Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #0a75cc71;
+      color: white;
+      padding: 10px 20px;
+      margin-right: 15px;
+    }
+
+    header .logo {
+      font-size: 24px;
+    }
+
+    header .social-links a {
+      color: white;
+      margin-left: 10px;
+      text-decoration: none;
+    }
+
+    nav {
+      background-color: #0a75cc71;
+      padding: 10px 20px;
+      margin-right: 15px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .container {
+      display: flex;
+      min-height: 500px;
+      margin-right: 15px;
+    }
+
+    aside {
+      width: 15%;
+      background-color: #0a75cc71;
+      padding: 20px;
+      color: white;
+      margin-right: 15px;
+    }
+
+   main {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  justify-content: space-between; 
+}
+
+
+   .box {
+  background-color: wheat;  ;
+  padding: 10px;
+  flex: 1 1 30%;           
+  min-width: 200px;
+  height: 350px;           
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.box img {
+  width: 100%;
+  height: 180px; 
+          
+  object-fit: cover;      
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.box h4 {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+.box p {
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+
+   footer {
+  background-color: #0a75cc71;
+  color:white;
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+  margin-right: 15px;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Media Connect</div>
+    <div class="social-links">
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <aside>
+      <h3>YOUR FEED</h3>
+      <p>Updates</p>
+      <p>Top 100</p>
+      <p>Suggestions</p>
+    </aside>
+
+    <main>
+      <div class="box">
+        <h4>News</h4>
+        <img src="https://tse3.mm.bing.net/th/id/OIP.d14BqR4u2DvMnUXAIG5SBgHaH6?pid=Api&P=0&h=180" alt="Image 1">
+
+        <p>Description for box one goes here.</p>
+      </div>
+      <div class="box">
+        <h4>Trending</h4>
+        <img src="https://tse4.mm.bing.net/th/id/OIP.4jqpkM6_jYrg2-19-pUjqwHaHa?pid=Api&P=0&h=180" alt="Image 2">
+        <p>Description for box two goes here.</p>
+      </div>
+      <div class="box">
+        <h4>Daily update</h4>
+        <img src="https://tse4.mm.bing.net/th/id/OIP.BAf7jcgybGO6vZ-USz2x0gAAAA?pid=Api&P=0&h=180" alt="Image 3">
+        <p>Description for box three goes here.</p>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <p>© MEDIA CONNECT</p>
+  </footer>
+
+</body>
+</html>

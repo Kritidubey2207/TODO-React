@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Task 9 - Word Count</title></head>
+<body>
+  <h2>Task 9: Count Words in Paragraph</h2>
+  <textarea id="para9" rows="4" cols="50">India is a vast country full of diversity and culture.</textarea><br>
+  <button onclick="countWords()">Count Words</button>
+  <div id="output9"></div>
+
+  <script>
+    function countWords() {
+      const text = document.getElementById('para9').value.trim();
+      const count = text.split(/\s+/).length;
+      document.getElementById('output9').innerText = `Words: ${count}`;
+    }
+  </script>
+</body>
+</html>

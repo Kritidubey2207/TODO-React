@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 11 - Average Marks</title>
+</head>
+<body>
+  <h2>Task 11: Calculate Average Marks for Students</h2>
+  <button onclick="calculateAverages()">Calculate Averages</button>
+
+  <h3>Output:</h3>
+  <pre id="output" style="background: #f0f0f0; padding: 10px; border-radius: 5px;"></pre>
+
+  <script>
+    function calculateAverages() {
+      const students = {
+        student1: { subject1: 44, subject2: 56, subject3: 87, subject4: 97, subject5: 37 },
+        student2: { subject1: 44, subject2: 56, subject3: 87, subject4: 97, subject5: 37 },
+        student3: { subject1: 44, subject2: 56, subject3: 87, subject4: 97, subject5: 37 }
+      };
+
+      const result = {};
+
+      for (let student in students) {
+        const scores = Object.values(students[student]);
+        const total = scores.reduce((sum, score) => sum + score, 0);
+        const average = total / scores.length;
+
+        result[student] = { average: Math.round(average) }; // Round for neatness
+      }
+
+      document.getElementById('output').innerText = JSON.stringify(result, null, 2);
+    }
+  </script>
+</body>
+</html>

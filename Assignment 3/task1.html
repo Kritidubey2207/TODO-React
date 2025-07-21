@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 1 - Filter States</title>
+</head>
+<body>
+  <h2>Task 1: Remove States Starting with Vowels</h2>
+  <button onclick="filterStates()">Filter States</button>
+  <div id="output1"></div>
+
+  <script>
+    function filterStates() {
+      const states = ["Uttar Pradesh", "Andhra Pradesh", "Kerala", "Odisha", "Punjab", "Assam", "Maharashtra"];
+      const result = states.filter(state => /^[aeiou]/i.test(state));
+      document.getElementById('output1').innerText = result.join(', ');
+    }
+  </script>
+</body>
+</html>

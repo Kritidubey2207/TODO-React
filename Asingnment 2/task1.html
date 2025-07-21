@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 2,task 1- Even Numbers</title>
+</head>
+<body>
+  <h2>Display Even Numbers from 1 to 100</h2>
+  <button onclick="showEvenNumbers()">Show Even Numbers</button>
+  <div id="evenOutput" style="margin-top: 10px;"></div>
+
+  <script>
+    function showEvenNumbers() {
+      let result = [];
+      for (let i = 2; i <= 100; i += 2) {
+        result.push(i);
+      }
+      document.getElementById('evenOutput').innerText = result.join(', ');
+    }
+  </script>
+</body>
+</html>

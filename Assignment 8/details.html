@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie Details</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h2>Movie Details</h2>
+  <div id="movieDetail"></div>
+  <button onclick="window.location.href='book.html'">Book Seat</button>
+
+  <script>
+    const movie = JSON.parse(localStorage.getItem("selectedMovie"));
+    const detail = document.getElementById("movieDetail");
+    detail.innerHTML = `
+      <img src="${movie.image}" style="max-width:200px" />
+      <h3>${movie.title}</h3>
+      <p>${movie.description}</p>
+    `;
+  </script>
+</body>
+</html>

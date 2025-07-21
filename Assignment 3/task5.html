@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Task 5 - Replace Word</title></head>
+<body>
+  <h2>Task 5: Replace a word in a sentence</h2>
+  <input type="text" id="sentence5" value="I live in Indai"><br>
+  <input type="text" id="wrong" value="Indai" placeholder="Wrong word"><br>
+  <input type="text" id="correct" value="India" placeholder="Correct word"><br>
+  <button onclick="replaceWord()">Replace</button>
+  <div id="output5"></div>
+
+  <script>
+    function replaceWord() {
+      let str = document.getElementById('sentence5').value;
+      let wrong = document.getElementById('wrong').value;
+      let correct = document.getElementById('correct').value;
+      let updated = str.replace(wrong, correct);
+      document.getElementById('output5').innerText = updated;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><title>Task 7 - Student Averages</title></head>
+<body>
+  <h2>Task 7: Calculate Average Score per Student</h2>
+  <button onclick="showAverages()">Show Averages</button>
+  <pre id="output7"></pre>
+
+  <script>
+    function showAverages() {
+      const students = [
+        { name: "Ram", scores: [80, 70, 60] },
+        { name: "Mohan", scores: [80, 70, 90] },
+        { name: "Sai", scores: [60, 70, 80] },
+        { name: "Hemang", scores: [90, 90, 80, 80] },
+      ];
+      const result = students.map(s => {
+        const avg = s.scores.reduce((a,b) => a+b, 0) / s.scores.length;
+        return { name: s.name, average: avg };
+      });
+      document.getElementById('output7').innerText = JSON.stringify(result, null, 2);
+    }
+  </script>
+</body>
+</html>

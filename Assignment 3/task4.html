@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 4 - Vowels & Consonants</title>
+</head>
+<body>
+  <h2>Task 4: Count Vowels and Consonants</h2>
+
+  <label for="text4">Enter a sentence or paragraph:</label><br>
+  <textarea id="text4" placeholder="Type your text here..." rows="4" cols="50"></textarea><br><br>
+
+  <button onclick="countVC()">Count</button>
+
+  <h3>Output:</h3>
+  <div id="output4" style="font-weight:bold; color: darkgreen;"></div>
+
+  <script>
+    function countVC() {
+      let str = document.getElementById('text4').value.trim();
+      let vowels = 'aeiouAEIOU', v = 0, c = 0;
+
+      for (let ch of str) {
+        if (/[a-zA-Z]/.test(ch)) {
+          vowels.includes(ch) ? v++ : c++;
+        }
+      }
+
+      document.getElementById('output4').innerText = `Vowels: ${v}, Consonants: ${c}`;
+    }
+  </script>
+</body>
+</html>
+

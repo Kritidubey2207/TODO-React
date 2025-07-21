@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Task 8 - Digit Sum</title></head>
+<body>
+  <h2>Task 8: Repeated Sum of Digits</h2>
+  <input type="number" id="num8" value="456" />
+  <button onclick="sumDigits()">Calculate</button>
+  <div id="output8"></div>
+
+  <script>
+    function sumDigits() {
+      let num = parseInt(document.getElementById('num8').value);
+      while (num > 9) {
+        num = num.toString().split('').reduce((a, b) => a + +b, 0);
+      }
+      document.getElementById('output8').innerText = `Result: ${num}`;
+    }
+  </script>
+</body>
+</html>

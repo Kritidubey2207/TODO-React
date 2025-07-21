@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Task 3 - Splice</title></head>
+<body>
+  <h2>Task 3: Convert INDIA to INDONESIA using splice</h2>
+  <button onclick="modifyString()">Transform</button>
+  <div id="output3"></div>
+
+  <script>
+    function modifyString() {
+      let str = 'INDIA';
+      let arr = str.split('');
+      arr.splice(3, 2, 'O', 'N', 'E', 'S', 'I', 'A');
+      document.getElementById('output3').innerText = arr.join('');
+    }
+  </script>
+</body>
+</html>
